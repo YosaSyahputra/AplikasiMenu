@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".CartActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp">
+
+        <ImageView
+            android:id="@+id/gambar_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!-- Harga menu -->
+    <TextView
+        android:id="@+id/nama_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="Nama Menu"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <!-- Keterangan menu -->
+    <TextView
+        android:id="@+id/keterangan_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="Keterangan Menu"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <!-- Harga menu -->
+    <TextView
+        android:id="@+id/harga_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:text="Harga Menu"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <!-- CardView untuk tombol tambah dan kurang -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Tombol Kurang -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_kurang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="@font/comic_neue_light"
+                android:onClick="kurangKuantitas"
+                android:text="-"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:iconTint="#03A9F4" />
+
+            <!-- Kuantitas menu dipesan -->
+            <TextView
+                android:id="@+id/kuantitas_menu"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+            <!-- Tombol Tambah -->
+
+            <!-- Total Harga -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_tambah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/background_rounded"
+                android:backgroundTint="#03A9F4"
+                android:fontFamily="@font/comic_neue_light"
+                android:onClick="tambahKuantitas"
+                android:text="+"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/total_harga"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="24dp"
+                android:layout_weight="1"
+                android:text="Rp. 0"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Tombol Pesan -->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_pesan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pesan"
+        android:textColor="#fff"
+        android:background="@drawable/background_rounded" />
+
+</LinearLayout>
